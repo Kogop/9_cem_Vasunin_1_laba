@@ -2,6 +2,7 @@
 //8 ферзей
 
 #include <iostream>
+#include <ctime>
 
 const int SIZE = 8; // Размер.
 
@@ -81,7 +82,13 @@ void setQueen(int a) // a - номер очередной строки в кот
 
 int main()
 {
-    setQueen(0);
+    time_t seconds;
 
+    seconds = time(NULL);
+    setQueen(0);
+    time_t seconds_2;
+
+    seconds_2 = time(NULL);
+    std::cout << seconds_2 - seconds << std::endl;
     return 0;
 }

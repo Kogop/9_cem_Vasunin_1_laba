@@ -29,7 +29,7 @@ bool tryQueen(int a, int b)
     {
         if (board[i][b])
         {
-            std::cout << i << std::endl;
+            //std::cout << i << std::endl;
             return false;
         }
     }
@@ -43,7 +43,7 @@ bool tryQueen(int a, int b)
         }
     }
 
-    for (int i = 1; i <= a && b + i < SIZE; i++)
+    for (int i = 1; i <= a && b + i < SIZE; ++i)
     {
         if (board[a - i][b + i])
         {
